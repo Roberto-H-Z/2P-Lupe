@@ -1,0 +1,695 @@
+/* Main Layout */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  .dashboard-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    height: 64px;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid #e2e8f0;
+    background-color: #fff;
+    padding: 0 16px;
+  }
+  
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .header-logo i {
+    color: #e53e3e;
+  }
+  
+  .header-logo h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .header-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .dashboard-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .monthly-chart-container {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .stats-summary {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .stats-summary {
+      border-top-color: #4a5568;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .monthly-chart-container {
+      height: 250px;
+    }
+    
+    .stats-summary {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  .chart-container {
+    height: 200px;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Asegura que el gráfico sea responsivo */
+  @media (max-width: 768px) {
+    .chart-container {
+      height: 180px;
+    }
+  }
+  
+  /* Cards */
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0.8, 0.6, 0.8, 0.6);
+    overflow: hidden;
+  }
+  
+  .card-gradient {
+    background: linear-gradient(to bottom right, #fff0f0, #fff);
+  }
+  
+  .card-highlight {
+    border: 1px solid #e53e3e;
+  }
+  
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px 8px 16px;
+  }
+  
+  .card-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .card-description {
+    font-size: 12px;
+    color: #718096;
+    margin: 4px 0 0 0;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  .card-content.no-padding {
+    padding: 0;
+  }
+  
+  .card-actions {
+    margin-top: 16px;
+  }
+  
+  /* Metrics */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .metrics-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .metrics-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .metric-value {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .metric-value.danger {
+    color: #e53e3e;
+  }
+  
+  .metric-description {
+    font-size: 12px;
+    color: #718096;
+    margin: 4px 0 0 0;
+  }
+  
+  /* Progress Bars */
+  .progress-container {
+    height: 8px;
+    background-color: #edf2f7;
+    border-radius: 4px;
+    margin-top: 16px;
+    overflow: hidden;
+  }
+  
+  .progress-container.danger-bg {
+    background-color: #fed7d7;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #4299e1;
+    border-radius: 4px;
+  }
+  
+  .progress-bar.danger {
+    background-color: #e53e3e;
+  }
+  
+  .progress-description {
+    font-size: 12px;
+    color: #718096;
+    margin: 4px 0 0 0;
+  }
+  
+  /* Unit Grid */
+  .unit-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+    margin-top: 16px;
+  }
+  
+  .unit-available {
+    height: 12px;
+    border-radius: 2px;
+    background-color: #48bb78;
+  }
+  
+  .unit-unavailable {
+    height: 12px;
+    border-radius: 2px;
+    background-color: #e53e3e;
+  }
+  
+  /* Tabs */
+  .tabs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .tabs-header {
+    display: flex;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .tab-button {
+    padding: 8px 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #718096;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .tab-button.active {
+    color: #4299e1;
+    border-bottom-color: #4299e1;
+  }
+  
+  .tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Map */
+  .map-container {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #edf2f7;
+  }
+  
+  .map-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2e8f0;
+  }
+  
+  .map-marker {
+    position: absolute;
+    color: #e53e3e;
+    animation: pulse 2s infinite;
+  }
+  
+  .marker-1 {
+    top: 25%;
+    left: 25%;
+  }
+  
+  .marker-2 {
+    top: 50%;
+    right: 33%;
+  }
+  
+  .marker-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: flex;
+    height: 20px;
+    width: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #e53e3e;
+    color: white;
+    font-size: 12px;
+  }
+  
+  .map-unit {
+    position: absolute;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #4299e1;
+    color: white;
+  }
+  
+  .unit-1 {
+    bottom: 25%;
+    right: 25%;
+  }
+  
+  .unit-2 {
+    top: 33%;
+    right: 25%;
+  }
+  
+  /* Incidents Grid */
+  .incidents-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .incidents-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .incidents-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .incident-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .incident-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  
+  .incident-detail {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .incident-detail i {
+    color: #718096;
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .chart-placeholder {
+    height: 300px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #edf2f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .chart-placeholder.small {
+    height: 200px;
+  }
+  
+  .chart-message {
+    color: #718096;
+  }
+  
+  .stats-summary {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+  }
+  
+  .stat-item {
+    text-align: center;
+  }
+  
+  .stat-value {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .stat-label {
+    font-size: 12px;
+    color: #718096;
+    margin: 0;
+  }
+  
+  /* Incident Types */
+  .incident-types {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .incident-type {
+    width: 100%;
+  }
+  
+  .type-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  
+  .type-count {
+    font-weight: 500;
+  }
+  
+  /* Weather Grid */
+  .weather-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .weather-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .weather-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* Forecast */
+  .forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+  
+  .forecast-day {
+    text-align: center;
+  }
+  
+  .day-name {
+    font-weight: 500;
+  }
+  
+  .risk-indicator {
+    margin: 8px auto;
+    padding: 8px;
+    border-radius: 50%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .risk-level {
+    margin-top: 4px;
+    font-size: 14px;
+  }
+  
+  .day-temp {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #718096;
+  }
+  
+  /* Risk Classes */
+  .risk-low {
+    background-color: #c6f6d5;
+    color: #38a169;
+  }
+  
+  .risk-moderate {
+    background-color: #fefcbf;
+    color: #d69e2e;
+  }
+  
+  .risk-high {
+    background-color: #fed7aa;
+    color: #dd6b20;
+  }
+  
+  .risk-very-high {
+    background-color: #fed7d7;
+    color: #e53e3e;
+  }
+  
+  .risk-extreme {
+    background-color: #feb2b2;
+    color: #c53030;
+  }
+  
+  /* Badges */
+  .badge {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .badge-danger {
+    background-color: #e53e3e;
+    color: white;
+  }
+  
+  .badge-outline {
+    background-color: transparent;
+    border: 1px solid #e2e8f0;
+    color: #718096;
+  }
+  
+  .badge i {
+    margin-right: 4px;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .btn i {
+    margin-right: 8px;
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 1px solid #e2e8f0;
+    color: #4a5568;
+  }
+  
+  .btn-danger {
+    background-color: #e53e3e;
+    color: white;
+  }
+  
+  .btn-full {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Icons */
+  [class^="icon-"] {
+    font-size: 16px;
+  }
+  
+  /* Animations */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    .dashboard-container {
+      background-color: #1a202c;
+      color: #e2e8f0;
+    }
+    
+    .dashboard-header, .card {
+      background-color: #2d3748;
+      border-color: #4a5568;
+    }
+    
+    .card-gradient {
+      background: linear-gradient(to bottom right, #3b2a2a, #2d3748);
+    }
+    
+    .card-title, .metric-value {
+      color: #e2e8f0;
+    }
+    
+    .card-description, .metric-description, .progress-description {
+      color: #a0aec0;
+    }
+    
+    .progress-container {
+      background-color: #4a5568;
+    }
+    
+    .progress-container.danger-bg {
+      background-color: #742a2a;
+    }
+    
+    .tab-button {
+      color: #a0aec0;
+    }
+    
+    .tab-button.active {
+      color: #63b3ed;
+      border-bottom-color: #63b3ed;
+    }
+    
+    .map-placeholder, .chart-placeholder {
+      background-color: #4a5568;
+    }
+    
+    .chart-message {
+      color: #a0aec0;
+    }
+    
+    .badge-outline {
+      border-color: #4a5568;
+      color: #a0aec0;
+    }
+    
+    .btn-outline {
+      border-color: #4a5568;
+      color: #a0aec0;
+    }
+    
+    .risk-low {
+      background-color: #276749;
+      color: #c6f6d5;
+    }
+    
+    .risk-moderate {
+      background-color: #744210;
+      color: #fefcbf;
+    }
+    
+    .risk-high {
+      background-color: #7b341e;
+      color: #fed7aa;
+    }
+    
+    .risk-very-high {
+      background-color: #742a2a;
+      color: #fed7d7;
+    }
+    
+    .risk-extreme {
+      background-color: #63171b;
+      color: #feb2b2;
+    }
+  }
