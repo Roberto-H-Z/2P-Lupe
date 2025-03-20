@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "activeIncidents": 3,
+    "totalUnits": 12
+  },
+  "unitArray": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  "incidents": [
+    {
+      "id": 1,
+      "type": "Incendio estructural",
+      "location": "123 Calle Principal, Centro",
+      "time": "10:32 AM",
+      "units": 3,
+      "status": "Activo"
+    },
+    {
+      "id": 2,
+      "type": "Incendio vehicular",
+      "location": "Autopista 101, Kilómetro 45",
+      "time": "9:15 AM",
+      "units": 1,
+      "status": "Activo"
+    },
+    {
+      "id": 3,
+      "type": "Emergencia médica",
+      "location": "45 Avenida Roble, Oeste",
+      "time": "8:50 AM",
+      "units": 1,
+      "status": "Resuelto"
+    },
+    {
+      "id": 4,
+      "type": "Fuga de gas",
+      "location": "78 Calle Pino, Norte",
+      "time": "7:22 AM",
+      "units": 2,
+      "status": "Resuelto"
+    },
+    {
+      "id": 5,
+      "type": "Incendio eléctrico",
+      "location": "Distrito Comercial, Torre B",
+      "time": "Ayer, 11:45 PM",
+      "units": 4,
+      "status": "Resuelto"
+    },
+    {
+      "id": 6,
+      "type": "Alerta de incendio forestal",
+      "location": "Colinas del Norte, Sector 7",
+      "time": "Ayer, 6:30 PM",
+      "units": 5,
+      "status": "Monitoreo"
+    }
+  ],
+  "incidentTypes": [
+    {
+      "id": 1,
+      "name": "Incendios estructurales",
+      "count": 42,
+      "percentage": 33
+    },
+    {
+      "id": 2,
+      "name": "Incidentes vehiculares",
+      "count": 28,
+      "percentage": 22
+    },
+    {
+      "id": 3,
+      "name": "Emergencias médicas",
+      "count": 35,
+      "percentage": 28
+    },
+    {
+      "id": 4,
+      "name": "Materiales peligrosos",
+      "count": 12,
+      "percentage": 9
+    },
+    {
+      "id": 5,
+      "name": "Alertas de incendio forestal",
+      "count": 10,
+      "percentage": 8
+    }
+  ],
+  "forecast": [
+    {
+      "id": 1,
+      "day": "Lun",
+      "risk": "Alto",
+      "temp": 33
+    },
+    {
+      "id": 2,
+      "day": "Mar",
+      "risk": "Muy Alto",
+      "temp": 35
+    },
+    {
+      "id": 3,
+      "day": "Mié",
+      "risk": "Alto",
+      "temp": 32
+    },
+    {
+      "id": 4,
+      "day": "Jue",
+      "risk": "Moderado",
+      "temp": 28
+    },
+    {
+      "id": 5,
+      "day": "Vie",
+      "risk": "Bajo",
+      "temp": 25
+    }
+  ]
+}

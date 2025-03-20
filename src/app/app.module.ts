@@ -7,18 +7,20 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { BaseChartDirective } from 'ng2-charts';
 import { LoginComponent } from './features/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    HttpClientModule,
     BaseChartDirective
   ],
   providers: [],
