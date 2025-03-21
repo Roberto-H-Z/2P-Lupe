@@ -95,36 +95,4 @@
 
 .form_style.ng-invalid.ng-touched {
     border-color: #c20000;
-}
-
-/* Estilos personalizados para SweetAlert2 */
-.swal2-popup-custom {
-    background-color: #718096 !important;
-    border: 2px solid #264143 !important;
-    border-radius: 20px !important;
-    box-shadow: 3px 4px 0px 1px #789ed8 !important;
-    padding: 2em !important;
-}
-
-.swal2-title-custom {
-    color: #264143 !important;
-    font-weight: 900 !important;
-    font-size: 1.5em !important;
-    margin-top: 20px !important;
-}
-
-/* Animación para el ícono de éxito */
-.swal2-icon.swal2-success {
-    border-color: #264143 !important;
-    color: #264143 !important;
-}
-
-.swal2-icon.swal2-success .swal2-success-ring {
-    border-color: #264143 !important;
-}
-
-.swal2-icon.swal2-success .swal2-success-line-tip,
-.swal2-icon.swal2-success .swal2-success-line-long {
-    background-color: #264143 !important;
-}
-
+} 
