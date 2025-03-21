@@ -1,0 +1,74 @@
+<div class="metrics-grid-container">
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">Incidentes Activos</h3>
+      <i class="icon-flame"></i>
+    </div>
+    <div class="card-content">
+      <div class="metrics-grid">
+        <div 
+          *ngFor="let type of incidentTypes" 
+          [ngClass]="['metric-item', getStatusClass(type)]">
+          <div class="metric-icon">
+            <i [class]="getIconForType(type.name)"></i>
+          </div>
+          <div class="metric-details">
+            <h4>{{ type.name }}</h4>
+            <p>{{ type.count }} Incidentes</p>
+            <span class="percentage">{{ type.percentage }}%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">Tiempo Promedio de Respuesta</h3>
+      <i class="icon-clock"></i>
+    </div>
+    <div class="card-content">
+      <div class="metric-value">4.2 min</div>
+      <p class="metric-description">-0.3 min respecto al mes pasado</p>
+      <div class="progress-container">
+        <div class="progress-bar" [style.width.%]="78"></div>
+      </div>
+      <p class="progress-description">78% del objetivo alcanzado</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">Unidades Disponibles</h3>
+      <i class="icon-truck"></i>
+    </div>
+    <div class="card-content">
+      <div class="metric-value">8/12</div>
+      <p class="metric-description">4 unidades actualmente desplegadas</p>
+      <div class="unit-grid">
+        <div *ngFor="let unit of unitArray; let i = index" 
+             [ngClass]="{
+               'unit-item': true, 
+               'unit-available': i < 8, 
+               'unit-unavailable': i >= 8
+             }">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">Personal en Servicio</h3>
+      <i class="icon-users"></i>
+    </div>
+    <div class="card-content">
+      <div class="metric-value">42/50</div>
+      <p class="metric-description">8 posiciones sin cubrir</p>
+      <div class="progress-container">
+        <div class="progress-bar" [style.width.%]="84"></div>
+      </div>
+      <p class="progress-description">84% nivel de personal</p>
+    </div>
+  </div>
+</div>

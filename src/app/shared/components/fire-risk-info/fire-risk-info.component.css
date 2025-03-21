@@ -1,0 +1,26 @@
+.risk-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.risk-info-item {
+  padding: 16px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.risk-info-item:hover {
+  transform: translateY(-4px);
+}
+
+.risk-info-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.risk-info-desc {
+  font-size: 14px;
+  line-height: 1.4;
+}

@@ -28,131 +28,115 @@
       "time": "8:50 AM",
       "units": 1,
       "status": "Resuelto"
-    },
-    {
-      "id": 4,
-      "type": "Fuga de gas",
-      "location": "78 Calle Pino, Norte",
-      "time": "7:22 AM",
-      "units": 2,
-      "status": "Resuelto"
-    },
-    {
-      "id": 5,
-      "type": "Incendio eléctrico",
-      "location": "Distrito Comercial, Torre B",
-      "time": "Ayer, 11:45 PM",
-      "units": 4,
-      "status": "Resuelto"
-    },
-    {
-      "id": 6,
-      "type": "Alerta de incendio forestal",
-      "location": "Colinas del Norte, Sector 7",
-      "time": "Ayer, 6:30 PM",
-      "units": 5,
-      "status": "Monitoreo"
     }
   ],
   "incidentTypes": [
     {
       "id": 1,
-      "name": "Incendios estructurales",
-      "count": 42,
-      "percentage": 33
+      "name": "Incendio",
+      "count": 45,
+      "percentage": 35
     },
     {
       "id": 2,
-      "name": "Incidentes vehiculares",
-      "count": 28,
-      "percentage": 22
+      "name": "Rescate",
+      "count": 30,
+      "percentage": 25
     },
     {
       "id": 3,
-      "name": "Emergencias médicas",
-      "count": 35,
-      "percentage": 28
+      "name": "Emergencia Médica",
+      "count": 20,
+      "percentage": 15
     },
     {
       "id": 4,
-      "name": "Materiales peligrosos",
-      "count": 12,
-      "percentage": 9
+      "name": "Materiales Peligrosos",
+      "count": 15,
+      "percentage": 10
     },
     {
       "id": 5,
-      "name": "Alertas de incendio forestal",
+      "name": "Desastre Natural",
       "count": 10,
-      "percentage": 8
+      "percentage": 15
     }
   ],
   "forecast": [
     {
       "id": 1,
-      "day": "Lun",
+      "day": "Hoy",
       "risk": "Alto",
-      "temp": 33
+      "temp": 32,
+      "humidity": 45,
+      "windSpeed": 15,
+      "icon": "sunny",
+      "description": "Córdoba, Veracruz"
     },
     {
       "id": 2,
-      "day": "Mar",
-      "risk": "Muy Alto",
-      "temp": 35
+      "day": "Mañana",
+      "risk": "Moderado",
+      "temp": 29,
+      "humidity": 55,
+      "windSpeed": 10,
+      "icon": "cloudy"
     },
     {
       "id": 3,
-      "day": "Mié",
-      "risk": "Alto",
-      "temp": 32
+      "day": "Miércoles",
+      "risk": "Bajo",
+      "temp": 27,
+      "humidity": 60,
+      "windSpeed": 8,
+      "icon": "cloudy"
     },
     {
       "id": 4,
-      "day": "Jue",
-      "risk": "Moderado",
-      "temp": 28
+      "day": "Jueves",
+      "risk": "Muy Alto",
+      "temp": 35,
+      "humidity": 30,
+      "windSpeed": 20,
+      "icon": "sunny"
     },
     {
       "id": 5,
-      "day": "Vie",
-      "risk": "Bajo",
-      "temp": 25
+      "day": "Viernes",
+      "risk": "Extremo",
+      "temp": 38,
+      "humidity": 25,
+      "windSpeed": 25,
+      "icon": "sunny"
     }
   ],
+  "responseTimeData": {
+    "labels": ["Ene", "Feb", "Mar", "Abr", "May", "Jun"],
+    "actualTimes": [4.2, 3.8, 4.5, 3.9, 3.5, 3.2],
+    "targetTimes": [4.0, 4.0, 4.0, 3.5, 3.5, 3.5]
+  },
   "monthlyIncidents": {
-    "labels": ["Semana 1", "Semana 2", "Semana 3", "Semana 4"],
+    "labels": ["Ene", "Feb", "Mar", "Abr", "May", "Jun"],
     "datasets": [
       {
         "label": "Incendios Estructurales",
-        "data": [12, 15, 8, 7]
+        "data": [12, 15, 10, 8, 14, 18]
       },
       {
         "label": "Incidentes Vehiculares",
-        "data": [8, 7, 6, 7]
+        "data": [8, 10, 12, 15, 10, 7]
       },
       {
         "label": "Emergencias Médicas",
-        "data": [9, 10, 8, 8]
+        "data": [5, 8, 10, 12, 8, 6]
       },
       {
         "label": "Materiales Peligrosos",
-        "data": [3, 4, 2, 3]
+        "data": [3, 2, 4, 5, 3, 2]
       },
       {
         "label": "Alertas de Incendios Forestales",
-        "data": [2, 3, 3, 2]
-      }
-    ]
-  },
-  "responseTime": {
-    "labels": ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
-    "datasets": [
-      {
-        "label": "Tiempo de respuesta (min)",
-        "data": [5.2, 4.8, 4.5, 4.3, 4.6, 4.1, 4.2]
-      },
-      {
-        "label": "Objetivo",
-        "data": [6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0]
+        "data": [2, 3, 5, 8, 12, 15]
       }
     ]
   }
