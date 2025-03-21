@@ -1,0 +1,56 @@
+/* Dashboard Header Styles */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-tabs {
+  display: flex;
+  gap: 16px;
+}
+
+.dashboard-tabs button {
+  background: none;
+  border: none;
+  color: #718096;
+  font-weight: 500;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.dashboard-tabs button:hover {
+  color: #2d3748;
+}
+
+.dashboard-tabs button.active {
+  color: #3182ce;
+  border-bottom-color: #3182ce;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .dashboard-header {
+    background-color: #2d3748;
+    border-color: #4a5568;
+  }
+  
+  .dashboard-tabs button {
+    color: #a0aec0;
+  }
+  
+  .dashboard-tabs button:hover {
+    color: #e2e8f0;
+  }
+  
+  .dashboard-tabs button.active {
+    color: #63b3ed;
+    border-bottom-color: #63b3ed;
+  }
+}

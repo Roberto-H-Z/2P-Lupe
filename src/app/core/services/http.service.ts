@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-interface Metadata {
+export interface Metadata {
   activeIncidents: number;
   totalUnits: number;
 }
 
-interface Incident {
+export interface Incident {
   id: number;
   type: string;
   location: string;
@@ -16,34 +16,33 @@ interface Incident {
   status: string;
 }
 
-interface IncidentType {
+export interface IncidentType {
   id: number;
   name: string;
   count: number;
   percentage: number;
 }
 
-interface ForecastDay {
+export interface ForecastDay {
   id: number;
   day: string;
   risk: string;
   temp: number;
+  humidity?: number;
+  windSpeed?: number;
+  icon?: string;
+  description?: string;
 }
 
-interface MonthlyIncidents {
+export interface ResponseTimeData {
   labels: string[];
-  datasets: Array<{
-    label: string;
-    data: number[];
-  }>;
+  actualTimes: number[];
+  targetTimes: number[];
 }
 
-interface ResponseTimeData {
+export interface MonthlyIncidentsData {
   labels: string[];
-  datasets: Array<{
-    label: string;
-    data: number[];
-  }>;
+  datasets: any[];
 }
 
 @Injectable({
@@ -74,13 +73,13 @@ export class HttpService {
     return this.http.get<ForecastDay[]>(`${this.apiUrl}/forecast`);
   }
 
-  // Fetch monthly incidents chart data
-  getMonthlyIncidents(): Observable<MonthlyIncidents> {
-    return this.http.get<MonthlyIncidents>(`${this.apiUrl}/monthlyIncidents`);
+  // Fetch response time data
+  getResponseTimeData(): Observable<ResponseTimeData> {
+    return this.http.get<ResponseTimeData>(`${this.apiUrl}/responseTimeData`);
   }
 
-  // Fetch response time chart data
-  getResponseTimeData(): Observable<ResponseTimeData> {
-    return this.http.get<ResponseTimeData>(`${this.apiUrl}/responseTime`);
+  // Fetch monthly incidents data
+  getMonthlyIncidents(): Observable<MonthlyIncidentsData> {
+    return this.http.get<MonthlyIncidentsData>(`${this.apiUrl}/monthlyIncidents`);
   }
 }

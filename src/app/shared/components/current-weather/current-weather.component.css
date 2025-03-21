@@ -1,0 +1,88 @@
+.current-weather-card {
+  grid-column: span 2;
+}
+
+.current-weather {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f8fafc;
+}
+
+.weather-icon {
+  font-size: 64px;
+  color: #4299e1;
+  margin-right: 16px;
+}
+
+.weather-info {
+  flex: 1;
+}
+
+.weather-temp {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.weather-desc {
+  font-size: 16px;
+  color: #4a5568;
+  margin-bottom: 16px;
+}
+
+.weather-details {
+  display: flex;
+  gap: 16px;
+}
+
+.weather-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #718096;
+}
+
+.weather-risk {
+  text-align: center;
+  padding: 0 16px;
+}
+
+.risk-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 8px;
+  min-width: 100px;
+}
+
+.risk-value {
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .current-weather {
+    background-color: #2d3748;
+  }
+  
+  .weather-desc {
+    color: #a0aec0;
+  }
+  
+  .weather-detail {
+    color: #cbd5e0;
+  }
+  
+  .weather-icon {
+    color: #63b3ed;
+  }
+}

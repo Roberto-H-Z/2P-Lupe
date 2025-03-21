@@ -1,0 +1,76 @@
+/* Monthly Stats Styles */
+.monthly-stats-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0.8, 0.6, 0.8, 0.6);
+  overflow: hidden;
+}
+
+.card {
+  height: 100%;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 8px 16px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.monthly-chart-container {
+  height: 300px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.stats-summary {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #718096;
+  margin: 0;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .monthly-stats-container {
+    background-color: #2d3748;
+  }
+  
+  .card-title {
+    color: #e2e8f0;
+  }
+  
+  .stats-summary {
+    border-top-color: #4a5568;
+  }
+  
+  .stat-label {
+    color: #a0aec0;
+  }
+}

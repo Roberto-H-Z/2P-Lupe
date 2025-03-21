@@ -1,0 +1,19 @@
+<div class="dashboard-header">
+  <nav class="dashboard-tabs">
+    <button 
+      (click)="changeTab('map')" 
+      [class.active]="activeTab === 'map'">
+      Map
+    </button>
+    <button 
+      (click)="changeTab('stats')" 
+      [class.active]="activeTab === 'stats'">
+      Stats
+    </button>
+    <button 
+      (click)="changeTab('incidents')" 
+      [class.active]="activeTab === 'incidents'">
+      Incidents
+    </button>
+  </nav>
+</div>

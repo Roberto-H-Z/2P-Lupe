@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Pronóstico de 5 Días</h3>
+  </div>
+  <div class="card-content">
+    <div class="forecast-grid">
+      <div *ngFor="let day of forecast" class="forecast-day-card">
+        <div class="day-name">{{day.day}}</div>
+        <div class="day-icon">
+          <i [class]="getWeatherIcon(day.icon)"></i>
+        </div>
+        <div class="day-temp">{{day.temp}}°C</div>
+        <div [ngClass]="getRiskClass(day.risk)" class="risk-level">
+          <span>{{day.risk}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

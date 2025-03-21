@@ -1,0 +1,21 @@
+<div class="incident-types-container card">
+  <div class="card-header">
+    <h3 class="card-title">Tipos de Incidentes</h3>
+  </div>
+  <div class="card-content">
+    <div class="incident-types">
+      <div *ngFor="let type of incidentTypes" class="incident-type">
+        <div class="type-header">
+          <span>{{ type.name }}</span>
+          <span class="type-count">{{ type.count }}</span>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar" 
+               [style.width.%]="type.percentage"
+               [style.backgroundColor]="getColorForType(type.name)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
